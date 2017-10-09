@@ -1,0 +1,28 @@
+[user]
+   name = Mustapha Lansana
+   email = stapha@gmail.com
+[diff]
+   renamelimit = 0
+[sendemail]
+    suppresscc = all
+   smtpserver = 
+[wrgit]
+   username = 
+[color]
+   ui = true
+   diff = auto
+   status = auto
+   branch = auto
+   interactive = auto
+   ui = true
+   pager = true
+[color "diff"]
+   meta = blue black bold
+[color "status"]
+   added = green
+   changed = red bold
+   untracked = magenta bold
+[color "branch"]
+   remote = yellow
+[core]
+   editor = vim
