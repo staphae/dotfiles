@@ -53,6 +53,7 @@ call vundle#end()
 filetype plugin indent on
 
 " ==== BASIC ====
+set diffopt+=vertical
 set encoding=utf-8
 set guifont=Monospace\ 10
 set fillchars+=vert:\$

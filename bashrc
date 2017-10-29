@@ -73,7 +73,7 @@ alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 # Always use vim for vi
 alias vi='vim'
-bindkey -v
+set -o vi
 function mkdircd(){
     mkdir -p "$*" && cd "$*";
 }
@@ -82,6 +82,9 @@ function mkdircd(){
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+fi
+if [ -f ~/.git-completion.bash ]; then
+   source ~/.git-completion.bash
 fi
 export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun-1.5.0.13/
 

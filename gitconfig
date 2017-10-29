@@ -4,10 +4,10 @@
 [diff]
    renamelimit = 0
 [sendemail]
-    suppresscc = all
-   smtpserver = 
+   suppresscc = all
+   smtpserver =
 [wrgit]
-   username = 
+   username =
 [color]
    ui = true
    diff = auto
@@ -26,3 +26,9 @@
    remote = yellow
 [core]
    editor = vim
+[alias]
+   co = checkout
+   br = branch
+   ci = commit
+   st = status
+   lg = log --graph --all --pretty=format:'%C(bold)%h%Creset -%C(auto)%d%Creset %s %C(green dim)(%cr)%Creset %C(ul)<%an>'
