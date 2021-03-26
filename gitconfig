@@ -1,34 +1,38 @@
 [user]
-   name = Mustapha Lansana
-   email = stapha@gmail.com
-[diff]
-   renamelimit = 0
-[sendemail]
-   suppresscc = all
-   smtpserver =
-[wrgit]
-   username =
+    name = Mustapha Lansana
+    email = sana@gmail.com
+[commit]
+    template = ~/opt/git-hooks/prepare-commit-msg
+[gitreview]
+    remote = origin
+    track = true
+    branch = master
 [color]
-   ui = true
-   diff = auto
-   status = auto
-   branch = auto
-   interactive = auto
-   ui = true
-   pager = true
-[color "diff"]
-   meta = blue black bold
-[color "status"]
-   added = green
-   changed = red bold
-   untracked = magenta bold
-[color "branch"]
-   remote = yellow
-[core]
-   editor = vim
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    pager = true
 [alias]
-   co = checkout
-   br = branch
-   ci = commit
-   st = status
-   lg = log --graph --all --pretty=format:'%C(bold)%h%Creset -%C(auto)%d%Creset %s %C(green dim)(%cr)%Creset %C(ul)<%an>'
+    graph = log --graph --all --decorate --color
+    ls = log --decorate --color
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    files = log --name-only
+    lg = log --graph --all --pretty=format:'%C(bold)%h%Creset -%C(auto)%d%Creset %s %C(green dim)(%cr)%Creset %C(ul)<%an>'
+    lognotag = log --format='%C(auto) %h%x09%an%x09%cd%x09%s'
+    g = grep --break --heading --line-number
+[core]
+    editor = vim
+    whitespace = fix
+[grep]
+    lineNumber = true
+    extendRegexp = true
+[pull]
+    rebase = true
+[init]
+    defaultBranch = master
+

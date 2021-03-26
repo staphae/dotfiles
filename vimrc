@@ -1,7 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set exrc
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -14,10 +13,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-vinegar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'klen/python-mode'
 "Plugin 'easymotion/vim-easymotion'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 "Plugin 'tpope/vim-surround'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Plugin 'godlygeek/tabular'
@@ -28,9 +27,9 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'sjl/gundo.vim'
 
 " ==== PLUGIN THEMES ====
-Plugin 'morhetz/gruvbox'
-Plugin 'altercation/vim-colors-solarized'
-"Plugin 'vim-scripts/darktango.vim'
+"Plugin 'morhetz/gruvbox'
+"Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-scripts/darktango.vim'
 "Plugin 'jonathanfilip/vim-lucius'
 " ==== END PLUGIN THEMES ====
 
@@ -87,7 +86,6 @@ let NERDTreeShowHidden=1
 let g:NERDTreeWinPos="left"
 let g:NERDTreeDirArrows=0
 map <C-t> :NERDTreeToggle<CR>
-
 " ==== Syntastic ====
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -122,15 +120,25 @@ nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
+nnoremap tc :tabclose<CR>
+
+" ==== BUFFERS ====
+" close buffer and go to previous
+nnoremap cb  :bp\|bd #<CR>
+" ==== Window Splitting ====
+"noremap <C-w>-  :split<cr>
+"noremap <C-w>\| :vsplit<cr>
+
 " ==== RELATIVE LINE NUMBERS ====
 set relativenumber
 "Vime ignore these file patterns
 set wildignore+=*/.git/*,/tmp/*,*.swp,*.pyc,.*
 " ==== SOLARIZED COLOR SCHEME ====
-set t_Co=256
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=16
+"set t_Co=256
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termcolors=16
+
 "colorscheme gruvbox
 
 " ==== HIGHLIGHT TABS & WHITESPACES====
@@ -139,7 +147,7 @@ set list
 " ==== SPACES FOR TABS ====
 set smartindent
 set expandtab
-set sw=3 ts=3 sts=3
+set sw=4 ts=4 sts=4
 
 set cursorline
 set showmatch
@@ -161,6 +169,8 @@ nnoremap <sapce> za
 nnoremap ; :
 inoremap jk <ESC>
 inoremap kj <ESC>
+inoremap JK <ESC>
+inoremap KJ <ESC>
 
 " Perform incremental search and highliht serach results
 set incsearch
@@ -170,3 +180,5 @@ set cindent
 " Map leader key
 let mapleader=","
 
+" ==== NERDTree NAVIGATION ====
+"noremap <C-w>n  :NERDTreeToggle<cr>
